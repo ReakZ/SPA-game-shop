@@ -1,0 +1,20 @@
+.Gens {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 20px;
+  padding: 0 10px;
+}
+
+.Gens__item {
+  background-color: rgb(41, 41, 161);
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+  cursor: pointer;
+
+}
+.Gens__item:hover {
+  background-color: rgb(21, 21, 221);
+}

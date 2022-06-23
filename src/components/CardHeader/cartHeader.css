@@ -1,0 +1,16 @@
+.card-block {
+  display: flex;
+  align-items: center;
+}
+
+.cart-block__icon {
+  cursor: pointer;
+transition: .3s;
+}
+
+
+.cart-block__icon:hover{
+  color: green;
+}
+.card-block__total-price {
+}

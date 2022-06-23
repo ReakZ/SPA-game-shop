@@ -1,0 +1,23 @@
+.CardGame{
+  display: flex;
+border-radius: 15px;
+background-color: rgb(23, 25, 80);
+flex-direction: column;
+
+}
+
+
+.CardGame__img{
+  height: 200px;
+  width: 380px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  margin-bottom: 30px;
+}
+
+.CardGame__title{
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+
+
