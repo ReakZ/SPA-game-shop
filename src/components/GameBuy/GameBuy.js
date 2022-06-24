@@ -1,34 +1,30 @@
 import './GameBuy.css';
-import {Buttons} from '../UI/buttons'
-export const GameBuy = ({Game,onClick}) => {
+import { Buttons } from '../UI/buttons';
+import { deleteItemFromCart, setItemInCart } from '../../redux/cart/reducer';
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux/es/exports';
+export const GameBuy = ({ Game }) => {
+  const dispatch = useDispatch();
+  const items = useSelector((state) => state.cart.gameInCart);
+  const itemInCart = items.some((item) => item.id === Game.id);
+  const handleClick = (e) => {
+    e.stopPropagation();
+    if (itemInCart) {
+      dispatch(deleteItemFromCart(Game.id));
+    } else {
+      dispatch(setItemInCart(Game));
+    }
+  };
   return (
     <div className="BuyBlock">
-<div className="BuyBlock__price">{Game.price} Руб</div>
-<Buttons type={'primary'} size='m' onClick={onClick}>Add to Cart</Buttons>
-
+      <div className="BuyBlock__price">{Game.price} Руб</div>
+      <Buttons
+        type={!itemInCart ? 'primary' : 'secondary'}
+        size="m"
+        onClick={handleClick}
+      >
+        {!itemInCart ? 'Добавить в корзину' : 'Убрать из корзины'}
+      </Buttons>
     </div>
-
-
   );
 };
-
-
-// .CardGame{
-//   display: flex;
-// border-radius: 15px;
-// background-color: rgb(23, 25, 80);
-// }
-
-
-// .CardGame__img{
-//   height: 120px;
-//   width: 100%;
-//   border-top-left-radius: 15px;
-//   border-top-right-radius: 15px;
-//   margin-bottom: 20px;
-// }
-
-// .CardGame__title{
-//   margin-bottom: 20px;
-// }
-// .CardGame__gen{

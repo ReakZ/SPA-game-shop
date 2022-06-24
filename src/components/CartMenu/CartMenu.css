@@ -1,0 +1,32 @@
+.cart-menu{
+  background-color: rgb(42,45,49);
+  border-radius: 15px;
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  position: absolute;
+  top:60px;
+  right: 0;
+  width: 400px;
+
+}
+
+.cart-menu__title{
+  font-size: 28px;
+  border-bottom:1px solid rgba(255, 255, 255, 0.5);
+  margin-bottom: 15px;
+}
+.cart-menu__list{
+  margin-bottom: 15px;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+
+.cart-menu__order{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 20px;
+}

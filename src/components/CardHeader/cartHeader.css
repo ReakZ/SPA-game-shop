@@ -1,6 +1,7 @@
 .card-block {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .cart-block__icon {
@@ -13,4 +14,19 @@ transition: .3s;
   color: green;
 }
 .card-block__total-price {
+}
+
+.cart-block__quantity{
+  position: absolute;
+  background-color: tomato;
+  width: 20px;
+  height: 20px;
+  font-size: 14px;
+  color: white;
+  border-radius: 15px;
+  right: -10px;
+  top: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
