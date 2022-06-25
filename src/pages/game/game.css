@@ -1,0 +1,31 @@
+/* <div className="game-page">
+<div className="game-page__video"></div>
+<div className="game-page__text">
+  <div
+    className="game-page__cover"
+    style={{ backgroundImage: `url(${currentGame.img})` }}
+  ></div>
+  <h2 className="game-page__title">{currentGame.title}</h2>
+  <p className="game-page__desc */
+
+.game-page {
+  margin-top: 30px;
+  display: flex;
+}
+
+.game-page__video {
+  width: 65%;
+}
+.game-page__text {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.game-page__cover{
+  width: 300px;
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

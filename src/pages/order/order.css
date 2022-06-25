@@ -1,0 +1,22 @@
+.order {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 15px;
+  justify-content: center;
+}
+
+.order__content {
+  margin-bottom: 30px;
+}
+.order__price {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.order__total {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+}

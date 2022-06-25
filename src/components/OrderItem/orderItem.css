@@ -1,0 +1,25 @@
+.order-item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.order-item__cover{
+  width: 330px;
+  height: 220px;
+}
+
+.order-item__price{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.order-item__icon-delete{
+  cursor: pointer;
+  transition: .3s;
+}
+
+.order-item__icon-delete:hover{
+  color: green;
+}

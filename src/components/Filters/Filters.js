@@ -28,13 +28,14 @@ export const Filters = () => {
   };
   return (
     <div className='filters'>
-      {AvaibleFilters.map((filter) => {
+      {AvaibleFilters.map((filter,i) => {
         const filerOn = filters.some((item) => item === filter);
         return (
           <Buttons
             type={filerOn ? 'primary' : 'secondary'}
             size={'s'}
             onClick={(e) => handleClick(e, filter, filerOn)}
+            key={i}
           >
             {filter}
           </Buttons>
